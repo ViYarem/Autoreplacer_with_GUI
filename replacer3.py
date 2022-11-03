@@ -1,19 +1,55 @@
-from pynput.keyboard import Key, Listener, KeyCode
+from pynput.keyboard import Key, Listener
 from tkinter import *
 import threading
 import pyautogui
 import string
+# ---------------------------------------------------------
+# VARIABLES
+# ---------------------------------------------------------
 options = False
-replacements = {"ruf": "Please remove under-segmentation on FC at ss",
-                "rof": "Please remove over-segmentation on FC at ss"
+replacements = {"rof": "Please remove over-segmentation on FC at ss ",
+                "ruf": "Please remove under-segmentation on FC at ss ",
+                "rot": "Please remove over-segmentation on TC at ss ",
+                "rut": "Please remove under-segmentation on FC at ss ",
+                "pcas": "Please correct as shown at ",
+                "pru": "Please remove undercut",
+                "fcb": "Please correct FC and FB as shown at ss",
+                "tcb": "Please correct TC and TB as shown at ss",
+                "rofb": "Please remove over-segmentation on FB at AS ",
+                "rufb": "Please remove under-segmentation on FB at AS ",
+                "rotb": "Please remove over-segmentation on TB at AS ",
+                "rutb": "Please remove under-segmentation on TB at AS ",
+                "pcas": "Please correct as shown at ",
+                "pru": "Please remove undercut",
+                "fhc": "Please adjust Femoral Head Center",
+                "pfp": "Please adjust Piriformis Fossa Point position",
+                "ame": "Please adjust Medial Epicondyle Point position",
+                "ale": "Please adjust Lateral Epicondyle Point position",
+                "mnp": "Please adjust Middle Notch Point position",
+                "aap": "Please adjust Anterior Point position",
+                "mpbp": "Please adjust Medial Posterior Bone Point position",
+                "lpbp": "Please adjust Lateral Posterior Bone Point position",
+                "fc": "Please correct Femoral Curve as shown",
+                "dtp": "Please adjust Distal Tibia Point position",
+                "aptp": "Please adjust Proximal Tibia Point position",
+                "fhp": "Please adjust Fibular Head Point position",
+                "msp": "Please adjust Medial Spine Point position",
+                "lsp": "Please adjust Lateral Spine Point position",
+                "mtp": "Please adjust Medial Tuberosity Point position",
+                "ltp": "Please adjust Lateral Tuberosity Point positio",
+                "msup": "Please adjust Medial Sulcus Point position",
+                "lsup": "Please adjust Lateral Sulcus Point position",
+                "tmc": "Please correct Tibial Medial Curve as shown",
+                "tlc": "Please correct Tibial Lateral Curve as shown"
                 }
-
 alphabet = list(string.ascii_lowercase)
-
 macro_starter = '`'
 macro_ender = Key.space
 listening = True
 typed_keys = []
+# ---------------------------------------------------------
+# FUNCTIONS
+# ---------------------------------------------------------MENU
 
 
 def on_enter(e):
@@ -28,6 +64,28 @@ def makeSomething(value, xwindow):
     global options
     options = value
     xwindow.destroy()
+
+
+def menu():
+    global options
+    window = Tk()
+    window.title("Replacer is working")
+    window.configure(bg='#000000')
+    lblx = Label(window, text=" ", bg='#000000')
+    lblx.grid(column=0, row=0)
+    lbl1 = Label(window, text="If you want to stop replacer, please put on button below:", font=(
+        "Arial Bold", 16), fg='#28c7e1', bg='#000000')
+    lbl1.grid(column=0, row=1)
+    lbl2 = Label(window, text=" ", bg='#000000')
+    lbl2.grid(column=0, row=2)
+    btn1 = Button(window, text="STOP", font=("Arial", 12), pady=15, activebackground="#28c7e1",
+                  activeforeground="#fff", command=lambda: makeSomething(True, window))
+    btn1.grid(column=0, row=3, sticky='we')
+    btn1.bind("<Enter>", on_enter)
+    btn1.bind("<Leave>", on_leave)
+    window.mainloop()
+    return
+# ---------------------------------------------------------MAIN
 
 
 def on_press(key):
@@ -53,36 +111,14 @@ def on_press(key):
                             'backspace', presses=len(candidate_keyword)+2)
                         pyautogui.typewrite(replacements[candidate_keyword])
                         listening = False
-
     # Stop listener
     elif options == True:
         return False
 
 
-def menu():
-    global options
-    window = Tk()
-    window.title("Replacer is working")
-    window.configure(bg='#000000')
-    lblx = Label(window, text=" ", bg='#000000')
-    lblx.grid(column=0, row=0)
-    lbl1 = Label(window, text="If you want to stop replacer, please put on button below:", font=(
-        "Arial Bold", 16), fg='#28c7e1', bg='#000000')
-    lbl1.grid(column=0, row=1)
-    lbl2 = Label(window, text=" ", bg='#000000')
-    lbl2.grid(column=0, row=2)
-    btn1 = Button(window, text="STOP", font=("Arial", 12), pady=15, activebackground="#28c7e1",
-                  activeforeground="#fff", command=lambda: makeSomething(True, window))
-    btn1.grid(column=0, row=3, sticky='we')
-    btn1.bind("<Enter>", on_enter)
-    btn1.bind("<Leave>", on_leave)
-
-    window.mainloop()
-    return
-
-
+# ---------------------------------------------------------THREAD
 t = threading.Thread(target=menu)
 t.start()
-
+# ---------------------------------------------------------LISTENER
 with Listener(on_press=on_press) as listener:
     listener.join()
