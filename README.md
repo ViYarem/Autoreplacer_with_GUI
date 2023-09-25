@@ -37,15 +37,11 @@ Backspace removes characters from the end of the sequence of entered characters 
 
 Key - hi, replacement - Hi, how are you?
 
-
 press: Shift+` --> ~*
-
 
 press: hi -->  ~*hi
 
-
 Press the space key --> Hi, how are you?
-
 
 These same actions before each keyword.
 
