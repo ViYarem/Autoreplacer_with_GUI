@@ -5,13 +5,13 @@ The script does the autoreplacement of the keywords are entered from keyboard. T
 ![image](https://github.com/ViYarem/autoreplacer/assets/68001529/73077dfb-5b16-4814-8f20-85576d112613)
 
 # What You Will Need
-Python>=3.0
-pynput==1.4.5
-tk==0.1.0
-PyAutoGUI==0.9.53
-pandas==1.3.5
-openpyxl==3.1.2
-xlsWriter==3.0.3
+Python>=3.0;
+pynput==1.4.5;
+tk==0.1.0;
+PyAutoGUI==0.9.53;
+pandas==1.3.5;
+openpyxl==3.1.2;
+xlsWriter==3.0.3;
 
 # First Launch
 If there is no excel file with keywords and replacements in the folder with Replacer.py, the file will be created automatically with an example of filling and instruction, a warning window with rules will also appear:
