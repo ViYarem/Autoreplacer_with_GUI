@@ -2,7 +2,7 @@
 ## Overview
 The script does the autoreplacement of the keywords are entered from keyboard. The keywords and words/phrases for replacement are being field in excel file. If you often fill documents with the same phrases and want to speed up this process, then this script may be usefull for you. The script launches a user-friendly GUI which includes small instruction for using.
 
-# What You Will Need
+## What You Will Need
 Python>=3.0;
 pynput==1.4.5;
 tk==0.1.0;
