@@ -22,7 +22,7 @@ Filled fields except (A1 and B1) are for reference only and can be changed (or u
 ! Do not change A1 (Keyword) and B1 (Replacement) cells
 ! Keywords are entered in column A, replacements - in column B opposite the key word. All characters except spaces are allowed in column A, all characters including spaces are allowed in column B
 
-# Main points
+# GUI
 At the next start, a window will appear:
 Indicators: ![image](https://github.com/ViYarem/autoreplacer/assets/68001529/2df46063-3d1d-4fea-a197-b46265fe884c) indicate that the replacer is active.
 Close button ![image](https://github.com/ViYarem/autoreplacer/assets/68001529/76a24f8f-cad8-492a-9d35-1731ee47e57a) is available only in inactive state: ![image](https://github.com/ViYarem/autoreplacer/assets/68001529/da461802-1585-4e42-8149-60ea29da8a08)
