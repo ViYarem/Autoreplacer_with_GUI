@@ -83,8 +83,6 @@ def nofile():
         'C4', '(qwe and QWE and Qwe and йце (cyrillic keyboard layout) - the same keyword with 1st replacement)', cf2)
     worksheet.write(
         'C5', 'Keywords must not include gaps(space)', cf2)
-    worksheet.write(
-        'C6', 'All questions and suggestions write to Vira Yaremchuk', cf3)
     workbook.close()
     root = Tk()
     root.configure(bg='#1C2833')
