@@ -1,3 +1,9 @@
+#pynput==1.4.5
+#tk==0.1.0
+#PyAutoGUI==0.9.53
+#pandas==1.3.5
+#openpyxl==3.1.2
+#xlsWriter==3.0.3
 from pynput.keyboard import Key, Listener, Controller
 from pynput import keyboard
 from tkinter import *
