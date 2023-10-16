@@ -1,6 +1,7 @@
 # Replacer.py
 ## Overview
 The script does the autoreplacement of the keywords are entered from keyboard. The keywords and words/phrases for replacement are being field in excel file. The script launches a user-friendly GUI which includes small instruction for using.
+![image1](https://github.com/ViYarem/Autoreplacer_with_GUI/assets/68001529/1a6a04d2-a9fc-4c50-ac01-b76cd92dbc2d)
 
 ## What You Will Need
 Python>=3.0;
@@ -9,7 +10,7 @@ tk==0.1.0;
 PyAutoGUI==0.9.53;
 pandas==1.3.5;
 openpyxl==3.1.2;
-xlsWriter==3.0.3;
+xlsWriter==3.0.3
 
 ## First Launch
 If there is no excel file with keywords and replacements in the folder with Replacer.py, the file will be created automatically with an example of filling and instruction, a warning window with rules will also appear.
