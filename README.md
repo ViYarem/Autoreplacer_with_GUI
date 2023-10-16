@@ -27,9 +27,9 @@ Autoreplacement from the corresponding line can be copied to the clipboard by do
 
 ## Keyboard replacement
 To apply the keyboard replacement, the program must be in active mode. 
-Press the keyboard shortcut shift+` that implements the symbol '~'. Then '*' will be automatically printed, that means replacer works. 
+Press the keyboard shortcut shift+` that implements the symbol '~'. Then * will be automatically printed, that means replacer works. 
 Enter the key combination in sequence that creates the keyword, then press space.
-You can cancel the start of the replacement if you delete the automatic * using Backspace. Also, can be deleted accidental chars after '*'.
+You can cancel the start of the replacement if you delete the automatic * using Backspace. Also, can be deleted accidental chars after *.
 
 ## An example:
 
