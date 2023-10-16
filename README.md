@@ -1,6 +1,7 @@
 # Replacer.py
 ## Overview
 The script does the autoreplacement of the keywords are entered from keyboard. The keywords and words/phrases for replacement are being field in excel file. The script launches a user-friendly GUI which includes small instruction for using.
+
 ![image1](https://github.com/ViYarem/Autoreplacer_with_GUI/assets/68001529/1a6a04d2-a9fc-4c50-ac01-b76cd92dbc2d)
 
 ## What You Will Need
