@@ -2,10 +2,9 @@
 ## Overview
 The script does the autoreplacement of the keywords are entered from keyboard. The keywords and words/phrases for replacement are being field in excel file. The script launches a user-friendly GUI which includes small instruction for using.
 
-Example:
+GUI's example:
 
-![2023-10-16_17-47-59](https://github.com/ViYarem/Autoreplacer_with_GUI/assets/68001529/b0e7ef4d-d6e5-4708-b223-8f705c64145f)
-
+![2023-10-16_17-47-59](https://github.com/ViYarem/Autoreplacer_with_GUI/assets/68001529/998549c8-2977-4b12-b8e5-3adc9d9d5998)
 
 ## What You Will Need
 Python>=3.0;
